@@ -1,0 +1,23 @@
+
+    <div class="card card-inverse">
+  <img class="card-img" src="./images/hall_2.jpg" alt="Card image">
+  <div class="card-img-overlay">
+    <h4 class="card-title">Przełącz się na muzykę!</h4>
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let set of items" class="col-md-4 card">
+            <img style="height: 150px;" class="card-img-top" [src]="set.img_tn" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">{{set.descr}} Set</h4>
+                <div><label>Name: </label>{{set.descr}}</div>
+                <div><label>Piece count: </label>{{set.pieces}}</div>
+                <div><label>Theme: </label>{{set.theme}}</div>
+                <p><a class="btn btn-secondary" role="button" [routerLink]="['/lego-shop-details', set.set_id]">View details &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>

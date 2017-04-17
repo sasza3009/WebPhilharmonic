@@ -1,0 +1,14 @@
+<h2 style="margin-left: 15px">Wpisz liczbę od 1 do 100</h2>
+<p style="margin-left: 15px">{{headline}}</p>
+<button style="margin-top: 5px; margin-bottom: 15px; margin-left: 15px" type="button" class="btn btn-info"  (click)="createNewGame()">{{initialized ? 'Nowa gra' : 'Rozpocznij'}}</button>
+<br>
+<input  [(ngModel)]="input" style="margin-left: 15px" type="text"  width="100px">
+<div>
+    <button style="margin-top: 10px; margin-bottom: 15px; margin-left: 120px" type="button" class="btn btn-info" (click)="compare()">Sprawdź</button>
+    <h3 style="margin-left: 15px">{{score}}</h3>
+    <p>{{number}}</p> <!-- pomoc przy zgadywaniu -->
+<br>
+  
+</div>
+
+    

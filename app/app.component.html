@@ -1,0 +1,57 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    <a class="navbar-brand" routerLink="/dashboard">Start</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault" [ngClass]="{collapse: isCollapsed}">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/repertoire" routerLinkActive="active">Repertuar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/tickets" routerLinkActive="active">Bilety</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Galeria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/contact" routerLinkActive="active">Kontakt</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/game" routerLinkActive="active">Gra</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="E-mail">
+            <input class="form-control mr-sm-2" type="password" placeholder="Hasło">
+            <li class="nav-item"> 
+                <button type="button" class="btn btn-secondary" routerLink="/forgottenPassword" routerLinkActive="active">Zapomniałeś hasła?</button>
+                <button type="button" class="btn btn-secondary">Zaloguj się</button>
+                <button type="button" class="btn btn-secondary" routerLink="/register" routerLinkActive="active">Zarejestruj się</button>
+        </li>
+        </form>
+      <!--  <form (ngSubmit)="search()" class="form-inline my-2 my-lg-0" novalidate>
+            <input [(ngModel)]="currentSearchPhrase" name="searchPhrase" class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+    </div>
+</nav>
+<router-outlet></router-outlet>
+
+<!--<div class="jumbotron">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            <alert></alert>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <hr>
+    <footer>
+        <p>&copy; Aleksandra Krzywańska</p>
+    </footer>
+</div>
